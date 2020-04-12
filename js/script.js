@@ -1,3 +1,7 @@
+setTimeout(function(){                // nach 2 sekunden bringt uns die Seite einfach weiter zu unserem href 
+	location.href = 'rocket.html';
+},2000);
+
 
 // changing class name (properties of classes are defined in css)
 var doCoolStuff = function() {

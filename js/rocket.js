@@ -16,7 +16,7 @@ var changeState = function (state) {
 				countdownNumber = countdownNumber-1;
 				document.getElementById("countdown")
 				.innerHTML = countdownNumber;
-						
+						countdownNumber = countdownNumber-1;
 						if (countdownNumber <= 0) {
 							changeState(3);
 						};

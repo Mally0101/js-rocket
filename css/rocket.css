@@ -1,3 +1,7 @@
+body{
+	font-family: 'helvetica', 'arial', sans-serif;
+}
+
 .left {
 	background-color: aquamarine;
 	position: fixed;
@@ -5,6 +9,26 @@
 	height: 100%;
 	top: 0;
 	left: 0;
+}
+
+.interface{
+	text-align: center;
+	padding: 20px;
+}
+
+a.button{
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 20px 40px;
+	text-decoration: none; /* macht das unterstrichene vom Link weg */
+	border-radius: 10px; /* rundet die Ecken ab */
+	text-transform: uppercase;
+	transition: color 300ms;
+}
+
+a:hover{
+	color: red;
 }
 
 .right {
@@ -18,36 +42,53 @@
 }
 
 .ground {
-	background-color: green;
+	background: url('../img/ground.png') no-repeat center center ;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 20px;
+	height: 111px;
 
 }
        
 .rocket {
 	position: absolute;
 	left: 50%;
-	bottom: 20px;
-	width: 20px;
-	height: 100px;
-	background-color: blue;
+	bottom: 10px;
+	width: 300px;
+	height: 400px;
+	margin-left: -150px;
+	background: url('../img/rocket.state1.png') no-repeat center center ;
 	transition: bottom 10000ms;
 }
 
-a {
 
+
+/* rocket background img */ 
+body.body-state2 .rocket {
+	background-image: url('../img/rocket.state2.png');
 }
 
-a.button {
-
+body.body-state3 .rocket,
+body.body-state4 .rocket {
+	background-image: url('../img/rocket.state3.png');
 }
+
+
+body.body-state5 .rocket {
+	background-image: url('../img/boom.png');
+	width: 500px;
+	height: 500px;
+	margin-left: -250px;  /* das zentriert das Bild */
+}
+
 
 body.body-state1 .rocket {
 	transition: none;
 }
+
+
+
 
 body.body-state3 .rocket,
 body.body-state4 .rocket {
